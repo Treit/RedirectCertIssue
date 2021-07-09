@@ -5,6 +5,6 @@ In a PowerShell window:
 
 Note the thumbprint of the newly-created certificate and then run:
 
-    netsh http add sslcert ipport=0.0.0.0:1235 certhash="$($cert.Thumbprint)" appid="{00112233-4455-6677-8899-AABBCCDDEEEF}"
+    netsh http add sslcert ipport=0.0.0.0:1234 certhash="$($cert.Thumbprint)" appid="{00112233-4455-6677-8899-AABBCCDDEEEF}"
 
 
