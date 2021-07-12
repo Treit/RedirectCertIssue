@@ -6,7 +6,16 @@ namespace TestProxy
     {
         static void Main(string[] args)
         {
-            DummyProxyServer.Start();
+            string listenUrl = @"https://localhost:1234";
+
+            if (args.Length > 0)
+            {
+                listenUrl = args[0];
+            }
+
+            Console.WriteLine($"Listening on {listenUrl}.");
+
+            DummyProxyServer.Start(listenUrl);
             Console.WriteLine("Press <Enter> to stop.");
             Console.ReadKey();
         }

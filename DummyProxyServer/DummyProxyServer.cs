@@ -17,9 +17,9 @@ namespace TestProxy
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }
 
-        public static void Start()
+        public static void Start(string listenUrl)
         {
-            WebApp.Start<Startup>("https://localhost:1234");
+            WebApp.Start<Startup>(listenUrl);
         }
 
         class Startup
